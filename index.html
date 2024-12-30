@@ -36,10 +36,11 @@
             color: #ffffff; /* Ensure content is white */
             text-transform: none; /* Keep body text mixed case */
         }
-        .section.box {
-            border: 2px solid #ffffff; /* White border for design */
-            padding: 10px;
-            display: inline-block;
+        .white-box {
+            border: 2px solid #ffffff; /* White border for the box */
+            padding: 10px; /* Padding inside the box */
+            margin-bottom: 15px; /* Space below the box */
+            display: inline-block; /* Ensure the box wraps content properly */
         }
     </style>
 </head>
@@ -48,7 +49,7 @@
     <img src="https://raw.githubusercontent.com/magicmouse247/StudioParcMastering/main/logo.png" alt="Logo">
 
     <!-- Sections -->
-    <div class="section box" onclick="toggleContent(this)">
+    <div class="section white-box" onclick="toggleContent(this)">
         &#43; SUBMIT YOUR MUSIC FOR MASTERING
         <div class="section-content">Placeholder content for submitting music for mastering.</div>
     </div>
