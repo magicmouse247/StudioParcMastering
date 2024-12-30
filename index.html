@@ -1,46 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Site Name</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      text-align: center;
-    }
-    header {
-      background: #333;
-      color: white;
-      padding: 1em 0;
-    }
-    header img {
-      max-width: 150px;
-    }
-    main {
-      padding: 2em;
-    }
-    footer {
-      margin-top: 2em;
-      font-size: 0.8em;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Minimalist Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+        }
+        img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .section {
+            cursor: pointer;
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        .section-content {
+            display: none;
+            font-size: 1rem;
+            margin-top: 5px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="path-to-your-logo.png" alt="Your Logo">
-    <h1>Welcome to My Website</h1>
-  </header>
-  <main>
-    <p>This is a simple, mobile-friendly site for showcasing your work.</p>
-  </main>
-  <footer>
-    <p>© 2024 Your Name. All rights reserved.</p>
-  </footer>
+    <!-- Logo -->
+    <img src="https://raw.githubusercontent.com/your-username/your-repository-name/branch-name/logo.png" alt="Logo">
+
+    <!-- Sections -->
+    <div class="section" onclick="toggleContent(this)">
+        &#43; Submit Your Music For Mastering
+        <div class="section-content">Placeholder content for submitting music for mastering.</div>
+    </div>
+
+    <div class="section" onclick="toggleContent(this)">
+        &#43; About
+        <div class="section-content">Placeholder content for the About section.</div>
+    </div>
+
+    <div class="section" onclick="toggleContent(this)">
+        &#43; Rates
+        <div class="section-content">Placeholder content for Rates.</div>
+    </div>
+
+    <div class="section" onclick="toggleContent(this)">
+        &#43; Artists
+        <div class="section-content">Placeholder content for Artists.</div>
+    </div>
+
+    <div class="section" onclick="toggleContent(this)">
+        &#43; Contact
+        <div class="section-content">Placeholder content for Contact info.</div>
+    </div>
+
+    <script>
+        function toggleContent(section) {
+            const content = section.querySelector('.section-content');
+            const isVisible = content.style.display === 'block';
+            content.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
-
