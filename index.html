@@ -8,8 +8,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #424242; /* Background matches the logo */
-            color: #ffffff; /* White text */
+            background-color: #424242; /* Background color matches the logo */
+            color: #ffffff; /* White text for contrast */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,13 +29,10 @@
             color: #ffffff;
         }
         .section-content {
-            display: none; /* Initially hidden */
+            display: none; /* Start hidden */
             font-size: 1rem;
             margin-top: 5px;
-            color: #ffffff;
-        }
-        .section-content.show {
-            display: block; /* Show when active */
+            color: #ffffff; /* Ensure content is white */
         }
     </style>
 </head>
@@ -72,7 +69,11 @@
     <script>
         function toggleContent(section) {
             const content = section.querySelector('.section-content');
-            content.classList.toggle('show'); // Add or remove 'show' class
+            if (content.style.display === "block") {
+                content.style.display = "none"; // Hide if visible
+            } else {
+                content.style.display = "block"; // Show if hidden
+            }
         }
     </script>
 </body>
