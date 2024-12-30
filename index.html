@@ -8,8 +8,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #424242; /* Inverted background color */
-            color: #ffffff; /* White text */
+            background-color: #424242 !important; /* Force the background color */
+            color: #ffffff !important; /* Force text color */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,56 +18,57 @@
             text-align: center;
         }
         img {
-            width: 450px !important; /* Force the width with !important */
+            width: 450px !important; /* Ensure correct logo size */
             height: auto; /* Maintain aspect ratio */
             margin-bottom: 20px;
         }
         h1 {
-            font-size: 1.5rem;
-            margin: 20px 0;
+            font-size: 1.5rem !important;
+            margin: 20px 0 !important;
+            color: #ffffff !important; /* White text for headings */
         }
         .section {
-            cursor: pointer;
-            margin: 10px 0;
-            font-size: 1.2rem;
-            color: #ffffff; /* Ensure section headers are white */
+            cursor: pointer !important;
+            margin: 10px 0 !important;
+            font-size: 1.2rem !important;
+            color: #ffffff !important; /* White text for clickable sections */
         }
         .section-content {
-            display: none;
-            font-size: 1rem;
-            margin-top: 5px;
-            color: #ffffff; /* Ensure expanded content is white */
+            display: none !important;
+            font-size: 1rem !important;
+            margin-top: 5px !important;
+            color: #ffffff !important; /* White text for expanded content */
         }
     </style>
 </head>
 <body>
     <!-- Logo -->
-    <img src="https://raw.githubusercontent.com/magicmouse247/StudioParcMastering/main/logo.png" alt="Logo">
+    <img src="https://raw.githubusercontent.com/magicmouse247/StudioParcMastering/main/logo.png" alt="Logo" style="background-color: #424242;">
 
     <!-- Sections -->
-    <div class="section" onclick="toggleContent(this)">
+    <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; Submit Your Music For Mastering
-        <div class="section-content">Placeholder content for submitting music for mastering.</div>
+        <div class="section-content" style="color: #ffffff;">Placeholder content for submitting music for mastering.</div>
     </div>
 
-    <div class="section" onclick="toggleContent(this)">
+    <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; About
-        <div class="section-content">Placeholder content for the About section.</div>
+        <div class="section-content" style="color: #ffffff;">Placeholder content for the About section.</div>
     </div>
 
-    <div class="section" onclick="toggleContent(this)">
+    <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; Rates
-        <div class="section-content">Placeholder content for Rates.</div>
+        <div class="section-content" style="color: #ffffff;">Placeholder content for Rates.</div>
     </div>
 
-    <div class="section" onclick="toggleContent(this)">
+    <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; Artists
-        <div class="section-content">Placeholder content for Artists.</div>
+        <div class="section-content" style="color: #ffffff;">Placeholder content for Artists.</div>
     </div>
 
-    <div class="section" onclick="toggleContent(this)">
+    <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; Contact
-        <div class="section-content">Placeholder content for Contact info.</div>
+        <div class="section-content" style="color: #ffffff;">Placeholder content for Contact info.</div>
     </div>
 
     <script>
