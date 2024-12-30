@@ -17,6 +17,11 @@
             height: 100vh;
             text-align: center;
         }
+        img {
+            width: 450px !important; /* Force the width with !important */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px;
+        }
         h1 {
             font-size: 1.5rem;
             margin: 20px 0;
@@ -36,7 +41,7 @@
 </head>
 <body>
     <!-- Logo -->
-    <img src="https://raw.githubusercontent.com/magicmouse247/StudioParcMastering/main/logo.png" alt="Logo" style="width: 450px; margin-bottom: 20px;">
+    <img src="https://raw.githubusercontent.com/magicmouse247/StudioParcMastering/main/logo.png" alt="Logo">
 
     <!-- Sections -->
     <div class="section" onclick="toggleContent(this)">
