@@ -34,10 +34,13 @@
             color: #ffffff !important; /* White text for clickable sections */
         }
         .section-content {
-            display: none !important;
+            display: none; /* Hidden by default */
             font-size: 1rem !important;
             margin-top: 5px !important;
             color: #ffffff !important; /* White text for expanded content */
+        }
+        .section-content.active {
+            display: block; /* Display when active */
         }
     </style>
 </head>
@@ -48,34 +51,33 @@
     <!-- Sections -->
     <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; Submit Your Music For Mastering
-        <div class="section-content" style="color: #ffffff;">Placeholder content for submitting music for mastering.</div>
+        <div class="section-content">Placeholder content for submitting music for mastering.</div>
     </div>
 
     <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; About
-        <div class="section-content" style="color: #ffffff;">Placeholder content for the About section.</div>
+        <div class="section-content">Placeholder content for the About section.</div>
     </div>
 
     <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; Rates
-        <div class="section-content" style="color: #ffffff;">Placeholder content for Rates.</div>
+        <div class="section-content">Placeholder content for Rates.</div>
     </div>
 
     <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; Artists
-        <div class="section-content" style="color: #ffffff;">Placeholder content for Artists.</div>
+        <div class="section-content">Placeholder content for Artists.</div>
     </div>
 
     <div class="section" onclick="toggleContent(this)" style="color: #ffffff;">
         &#43; Contact
-        <div class="section-content" style="color: #ffffff;">Placeholder content for Contact info.</div>
+        <div class="section-content">Placeholder content for Contact info.</div>
     </div>
 
     <script>
         function toggleContent(section) {
             const content = section.querySelector('.section-content');
-            const isVisible = content.style.display === 'block';
-            content.style.display = isVisible ? 'none' : 'block';
+            content.classList.toggle('active');
         }
     </script>
 </body>
