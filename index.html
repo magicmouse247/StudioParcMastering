@@ -162,8 +162,10 @@
             const content = section.querySelector('.section-content');
             if (content.style.display === "block") {
                 content.style.display = "none"; // Hide if visible
+                section.style.textDecoration = "none"; // Remove underline
             } else {
                 content.style.display = "block"; // Show if hidden
+                section.style.textDecoration = "underline"; // Add underline
             }
         }
     </script>
