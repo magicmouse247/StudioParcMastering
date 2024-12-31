@@ -30,10 +30,13 @@
         }
         
         .section {
-            cursor: pointer;
             margin: 10px 0;
             font-size: 1.2rem;
             color: #ffffff;
+        }
+        .section-header {
+            cursor: pointer;
+            text-decoration: none; /* No underline initially */
         }
         .section-content {
             display: none; /* Start hidden */
@@ -41,7 +44,7 @@
             margin-top: 5px;
             color: #ffffff; /* Ensure content is white */
             text-transform: none; /* Keep body text mixed case */
-            text-decoration: none; /* Force body content to not be underlined */
+            text-decoration: none; /* Ensure body content is not underlined */
         }
         .section.box {
             border: 2px solid #ffffff; /* White border for design */
@@ -55,13 +58,13 @@
     <img src="https://raw.githubusercontent.com/magicmouse247/StudioParcMastering/refs/heads/main/logoblue.png" alt="Logo">
 
     <!-- Sections -->
-    <div class="section" style="border: 2px solid #ffffff; padding: 10px; display: inline-block;" onclick="toggleContent(this)">
-        submit your music for mastering
+    <div class="section">
+        <div class="section-header" onclick="toggleContent(this)">submit your music for mastering</div>
         <div class="section-content"><p>Send unmastered .wav files // project info to<br><em>josh (at) studioparcmastering (dot) com</em><br></p><p>I will respond within 24hrs with a quote.</p></div>
     </div>
 
-    <div class="section" onclick="toggleContent(this)">
-        ?
+    <div class="section">
+        <div class="section-header" onclick="toggleContent(this)">?</div>
         <div class="section-content">
             <p>Professional, affordable audio mastering.<br>
                 Crafted to achieve the aesthetic and technical goals of your project.</p>
@@ -75,98 +78,100 @@
         </div>
     </div>
 
-    <div class="section" onclick="toggleContent(this)">
-        $
+    <div class="section">
+        <div class="section-header" onclick="toggleContent(this)">$</div>
         <div class="section-content">Rates vary from project to project. Average cost per album: $500. per single: $100.</div>
     </div>
 
-    <div class="section" onclick="toggleContent(this)">
-    ♫
-    <div class="section-content">
-        Alec Meen<br>
-        Ambrosini Rossi<br>
-        Antonello Teora<br>
-        Antonio Ciampi<br>
-        Aquarius<br>
-        Avalon Tassonyi<br>
-        Baby Smoker<br>
-        BHC<br>
-        Blue Odeur<br>
-        Brad Barr<br>
-        Carla Sagan<br>
-        Cisero<br>
-        Crack Cloud<br>
-        Crushhh<br>
-        The Daniel Saunders Experiment<br>
-        Debby Friday<br>
-        Dedicare<br>
-        Désolee<br>
-        Doffing<br>
-        Dresser<br>
-        Elf Rage<br>
-        Eve Adams<br>
-        Family Band<br>
-        Family Visions<br>
-        Farser<br>
-        The Firing Squad<br>
-        Florista<br>
-        Flotta<br>
-        girl with dream<br>
-        The Goddamsels<br>
-        GRIPES<br>
-        HRT<br>
-        inland island<br>
-        JB Special<br>
-        Jeanne Marceau<br>
-        Julien Elsie<br>
-        Kaisha Lee<br>
-        Knives<br>
-        l.n. baba<br>
-        Lucia Gisella<br>
-        Mac DeMarco<br>
-        Margret<br>
-        Military Genius<br>
-        Night Lunch<br>
-        Nonnula<br>
-        The Olympus Quartet<br>
-        Ominous Cloud<br>
-        Our Friend Colby<br>
-        Owen Ostrowski<br>
-        The Painters<br>
-        Pantie Wilson<br>
-        Petsi<br>
-        Punctï<br>
-        Tiara<br>
-        Thurible<br>
-        Really Good Bad Guy<br>
-        Rivalled Envy<br>
-        Scout<br>
-        Selce<br>
-        Sophie Wonfor<br>
-        The Submissives<br>
-        Unschooling<br>
-        Valentina<br>
-        VVAS<br>
-        Wave and So<br>
-        Whitney K<br>
-        Yetzer Hara
+    <div class="section">
+        <div class="section-header" onclick="toggleContent(this)">♫</div>
+        <div class="section-content">
+            Alec Meen<br>
+            Ambrosini Rossi<br>
+            Antonello Teora<br>
+            Antonio Ciampi<br>
+            Aquarius<br>
+            Avalon Tassonyi<br>
+            Baby Smoker<br>
+            BHC<br>
+            Blue Odeur<br>
+            Brad Barr<br>
+            Carla Sagan<br>
+            Cisero<br>
+            Crack Cloud<br>
+            Crushhh<br>
+            The Daniel Saunders Experiment<br>
+            Debby Friday<br>
+            Dedicare<br>
+            Désolee<br>
+            Doffing<br>
+            Dresser<br>
+            Elf Rage<br>
+            Eve Adams<br>
+            Family Band<br>
+            Family Visions<br>
+            Farser<br>
+            The Firing Squad<br>
+            Florista<br>
+            Flotta<br>
+            girl with dream<br>
+            The Goddamsels<br>
+            GRIPES<br>
+            HRT<br>
+            inland island<br>
+            JB Special<br>
+            Jeanne Marceau<br>
+            Julien Elsie<br>
+            Kaisha Lee<br>
+            Knives<br>
+            l.n. baba<br>
+            Lucia Gisella<br>
+            Mac DeMarco<br>
+            Margret<br>
+            Military Genius<br>
+            Night Lunch<br>
+            Nonnula<br>
+            The Olympus Quartet<br>
+            Ominous Cloud<br>
+            Our Friend Colby<br>
+            Owen Ostrowski<br>
+            The Painters<br>
+            Pantie Wilson<br>
+            Petsi<br>
+            Punctï<br>
+            Tiara<br>
+            Thurible<br>
+            Really Good Bad Guy<br>
+            Rivalled Envy<br>
+            Scout<br>
+            Selce<br>
+            Sophie Wonfor<br>
+            The Submissives<br>
+            Unschooling<br>
+            Valentina<br>
+            VVAS<br>
+            Wave and So<br>
+            Whitney K<br>
+            Yetzer Hara
+        </div>
     </div>
-</div>
 
-    <div class="section" onclick="toggleContent(this)">
-        @
+    <div class="section">
+        <div class="section-header" onclick="toggleContent(this)">@</div>
         <div class="section-content">josh (at) studioparcmastering (dot) com</div>
     </div>
 
     <script>
-        function toggleContent(section) {
+        function toggleContent(header) {
+            const section = header.parentElement;
             const content = section.querySelector('.section-content');
+
             if (content.style.display === "block") {
                 content.style.display = "none"; // Hide content
-                section.style.textDecoration = "none"; // Remove underline from subheader
+                header.style.textDecoration = "none"; // Remove underline from header
             } else {
                 content.style.display = "block"; // Show content
-                section.style.textDecoration = "underline"; // Add underline to subheader
+                header.style.textDecoration = "underline"; // Add underline to header
             }
         }
     </script>
