@@ -11,19 +11,36 @@
             background-color: #0f00e7;
             color: #ffffff;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Stack sections vertically */
+            justify-content: flex-start; /* Align content to the top */
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
+            overflow-y: auto; /* Enable scrolling on mobile */
+            padding: 20px; /* Add padding around content */
+        }
+        .header, .content {
+            max-width: 33%;
+            margin: 10px auto;
+            text-align: center;
+        }
+        .content {
+            text-align: left; /* Align text to the left */
+        }
+
+        @media (max-width: 768px) {
+            .header, .content {
+                max-width: 90%; /* Adjust width for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
-    <div style="max-width: 33%; margin: 0 auto; text-align: center;">
+    <div class="header">
         <h1 style="font-size: 1.5rem; line-height: 1.8;">To receive an estimate, or to submit your music for mastering, please copy/paste this info to:</h1>
-      <p><em>josh (at) studioparcmastering (dot) com</em></p>
-      </div>
-    <div style="max-width: 33%; margin: 0 auto; text-align: left;">
+        <p><em>josh (at) studioparcmastering (dot) com</em></p>
+    </div>
+    <div class="content">
         <p>Your Name:</p>
         <p>Download Link (<em>.wav files; Google drive, Wetransfer, etc</em>):</p>
         <p>Your Email:</p>
@@ -39,4 +56,3 @@
     </div>
 </body>
 </html>
-
