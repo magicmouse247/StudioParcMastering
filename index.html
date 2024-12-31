@@ -162,10 +162,11 @@
             const content = section.querySelector('.section-content');
             if (content.style.display === "block") {
                 content.style.display = "none"; // Hide if visible
-                section.style.textDecoration = "none"; // Remove underline
+                section.style.textDecoration = "none"; // Remove underline from subheader
             } else {
                 content.style.display = "block"; // Show if hidden
-                section.style.textDecoration = "underline"; // Add underline
+                section.style.textDecoration = "underline"; // Add underline to subheader
+                content.style.textDecoration = "none"; // Ensure body content is not underlined
             }
         }
     </script>
