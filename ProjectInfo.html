@@ -54,5 +54,29 @@
         <p>Reference Tracks (<em>Optional</em>):</p>
         <p>Notes:</p>
     </div>
+    <button onclick="copyToClipboard()" style="margin-top: 20px; padding: 10px 20px; background-color: #ffffff; color: #0f00e7; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;">Copy to Clipboard</button>
+
+    <script>
+        function copyToClipboard() {
+            const content = `Your Name:
+Download Link (.wav files; Google drive, Wetransfer, etc):
+Your Email:
+Artist Name:
+Album/Project Title:
+Type of Project (Album, EP, Podcast, etc):
+Number of Tracks:
+Total Length of Audio:
+Release Format(s) (ex. Please note if you require vinyl/CD masters):
+Tracklist + Side A/B if applicable:
+Reference Tracks (Optional):
+Notes:`;
+
+            navigator.clipboard.writeText(content).then(() => {
+                alert('Content copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy content: ' + err);
+            });
+        }
+    </script>
 </body>
 </html>
