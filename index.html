@@ -58,8 +58,25 @@
             text-transform: none;
             text-decoration: none;
             overflow-y: auto; /* Allow scrolling for sections that need it */
-            max-height: 30vh;
-            scrollbar-gutter: stable both-edges;
+            max-height: 30vh; /* Prevent content from taking the entire viewport height */
+            scrollbar-gutter: stable both-edges; /* Reserve space for the scrollbar */
+            position: relative;
+        }
+
+        .section-content.scrollable::after {
+            content: "↓ Scroll ↓"; /* Add scroll indicator */
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: #ffffff;
+            display: block;
+        }
+
+        .section-content.no-scroll {
+            overflow-y: visible; /* No scrolling */
+            max-height: none; /* No height restriction */
         }
 
         .section-content.no-scroll {
@@ -142,8 +159,8 @@
 
         <div class="section">
             <div class="section-header" onclick="toggleContent(this)">♫</div>
-            <div class="section-content">
-                <p>Alec Meen<br>
+            <div class="section-content scrollable">
+        <p>Alec Meen<br>
                 Ambrosini Rossi<br>
                 Antonello Teora<br>
                 Antonio Ciampi<br>
