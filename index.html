@@ -63,6 +63,21 @@
         }
 
         .section-content.no-scroll {
+            overflow-y: visible; /* No scrolling */
+            max-height: none; /* No height restriction */
+        }
+
+        .section-content::-webkit-scrollbar {
+            display: block; /* Always show scrollbar */
+            width: 8px;
+        }
+
+        .section-content::-webkit-scrollbar-thumb {
+            background: #ffffff;
+            border-radius: 4px;
+        }
+
+        .section-content.no-scroll {
             overflow-y: visible; /* Allow the content to expand fully */
             max-height: none; /* No height restriction */
         }
