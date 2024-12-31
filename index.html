@@ -11,7 +11,7 @@
             background-color: #0f00e7; /* Background color matches the logo */
             color: #ffffff; /* White text for contrast */
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             flex-direction: column;
             min-height: 100vh;
@@ -30,10 +30,20 @@
             }
         }
         
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
         .section {
             margin: 10px 0;
             font-size: 1.2rem;
             color: #ffffff;
+            width: 90%;
+            max-width: 600px;
         }
         .section-header {
             cursor: pointer;
@@ -49,6 +59,13 @@
             overflow-y: auto; /* Allow scrolling within content */
             max-height: 60vh; /* Prevent content from taking the entire viewport height */
         }
+        .section-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .section-content::-webkit-scrollbar-thumb {
+            background: #ffffff;
+            border-radius: 4px;
+        }
         .section.box {
             border: 2px solid #ffffff; /* White border for design */
             padding: 10px;
@@ -57,111 +74,113 @@
     </style>
 </head>
 <body>
-    <!-- Logo -->
-    <img src="https://raw.githubusercontent.com/magicmouse247/StudioParcMastering/refs/heads/main/logoblue.png" alt="Logo">
+    <div class="container">
+        <!-- Logo -->
+        <img src="https://raw.githubusercontent.com/magicmouse247/StudioParcMastering/refs/heads/main/logoblue.png" alt="Logo">
 
-    <!-- Sections -->
-    <div class="section box">
-        <div class="section-header" onclick="toggleContent(this)">submit your music for mastering</div>
-        <div class="section-content"><p>Send unmastered .wav files // project info to<br><em>josh (at) studioparcmastering (dot) com</em><br></p><p>I will respond within 24hrs with a quote.</p></div>
-    </div>
-
-    <div class="section">
-        <div class="section-header" onclick="toggleContent(this)">?</div>
-        <div class="section-content">
-            <p>Professional, affordable audio mastering.<br>
-                Crafted to achieve the aesthetic and technical goals of your project.</p>
-        <p><strong>:: SERVICES ::</strong></p>
-        <p><em>Music for DSPs<br>
-        Vinyl Masters<br>
-        Podcast editing and mastering<br>
-        CD Masters / DDP Delivery<br>
-        etc...</p></em>
-            <p>Studio Parc is operated by Josh Boguski</p>
+        <!-- Sections -->
+        <div class="section box">
+            <div class="section-header" onclick="toggleContent(this)">submit your music for mastering</div>
+            <div class="section-content"><p>Send unmastered .wav files // project info to<br><em>josh (at) studioparcmastering (dot) com</em><br></p><p>I will respond within 24hrs with a quote.</p></div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section-header" onclick="toggleContent(this)">$</div>
-        <div class="section-content">Rates vary from project to project. Average cost per album: $500. per single: $100.</div>
-    </div>
-
-    <div class="section">
-        <div class="section-header" onclick="toggleContent(this)">♫</div>
-        <div class="section-content">
-            Alec Meen<br>
-            Ambrosini Rossi<br>
-            Antonello Teora<br>
-            Antonio Ciampi<br>
-            Aquarius<br>
-            Avalon Tassonyi<br>
-            Baby Smoker<br>
-            BHC<br>
-            Blue Odeur<br>
-            Brad Barr<br>
-            Carla Sagan<br>
-            Cisero<br>
-            Crack Cloud<br>
-            Crushhh<br>
-            The Daniel Saunders Experiment<br>
-            Debby Friday<br>
-            Dedicare<br>
-            Désolee<br>
-            Doffing<br>
-            Dresser<br>
-            Elf Rage<br>
-            Eve Adams<br>
-            Family Band<br>
-            Family Visions<br>
-            Farser<br>
-            The Firing Squad<br>
-            Florista<br>
-            Flotta<br>
-            girl with dream<br>
-            The Goddamsels<br>
-            GRIPES<br>
-            HRT<br>
-            inland island<br>
-            JB Special<br>
-            Jeanne Marceau<br>
-            Julien Elsie<br>
-            Kaisha Lee<br>
-            Knives<br>
-            l.n. baba<br>
-            Lucia Gisella<br>
-            Mac DeMarco<br>
-            Margret<br>
-            Military Genius<br>
-            Night Lunch<br>
-            Nonnula<br>
-            The Olympus Quartet<br>
-            Ominous Cloud<br>
-            Our Friend Colby<br>
-            Owen Ostrowski<br>
-            The Painters<br>
-            Pantie Wilson<br>
-            Petsi<br>
-            Punctï<br>
-            Tiara<br>
-            Thurible<br>
-            Really Good Bad Guy<br>
-            Rivalled Envy<br>
-            Scout<br>
-            Selce<br>
-            Sophie Wonfor<br>
-            The Submissives<br>
-            Unschooling<br>
-            Valentina<br>
-            VVAS<br>
-            Wave and So<br>
-            Whitney K<br>
-            Yetzer Hara
+        <div class="section">
+            <div class="section-header" onclick="toggleContent(this)">?</div>
+            <div class="section-content">
+                <p>Professional, affordable audio mastering.<br>
+                    Crafted to achieve the aesthetic and technical goals of your project.</p>
+                <p><strong>:: SERVICES ::</strong></p>
+                <p><em>Music for DSPs<br>
+                    Vinyl Masters<br>
+                    Podcast editing and mastering<br>
+                    CD Masters / DDP Delivery<br>
+                    etc...</p></em>
+                <p>Studio Parc is operated by Josh Boguski</p>
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section-header" onclick="toggleContent(this)">@</div>
-        <div class="section-content">josh (at) studioparcmastering (dot) com</div>
+        <div class="section">
+            <div class="section-header" onclick="toggleContent(this)">$</div>
+            <div class="section-content">Rates vary from project to project. Average cost per album: $500. per single: $100.</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleContent(this)">♫</div>
+            <div class="section-content">
+                Alec Meen<br>
+                Ambrosini Rossi<br>
+                Antonello Teora<br>
+                Antonio Ciampi<br>
+                Aquarius<br>
+                Avalon Tassonyi<br>
+                Baby Smoker<br>
+                BHC<br>
+                Blue Odeur<br>
+                Brad Barr<br>
+                Carla Sagan<br>
+                Cisero<br>
+                Crack Cloud<br>
+                Crushhh<br>
+                The Daniel Saunders Experiment<br>
+                Debby Friday<br>
+                Dedicare<br>
+                Désolee<br>
+                Doffing<br>
+                Dresser<br>
+                Elf Rage<br>
+                Eve Adams<br>
+                Family Band<br>
+                Family Visions<br>
+                Farser<br>
+                The Firing Squad<br>
+                Florista<br>
+                Flotta<br>
+                girl with dream<br>
+                The Goddamsels<br>
+                GRIPES<br>
+                HRT<br>
+                inland island<br>
+                JB Special<br>
+                Jeanne Marceau<br>
+                Julien Elsie<br>
+                Kaisha Lee<br>
+                Knives<br>
+                l.n. baba<br>
+                Lucia Gisella<br>
+                Mac DeMarco<br>
+                Margret<br>
+                Military Genius<br>
+                Night Lunch<br>
+                Nonnula<br>
+                The Olympus Quartet<br>
+                Ominous Cloud<br>
+                Our Friend Colby<br>
+                Owen Ostrowski<br>
+                The Painters<br>
+                Pantie Wilson<br>
+                Petsi<br>
+                Punctï<br>
+                Tiara<br>
+                Thurible<br>
+                Really Good Bad Guy<br>
+                Rivalled Envy<br>
+                Scout<br>
+                Selce<br>
+                Sophie Wonfor<br>
+                The Submissives<br>
+                Unschooling<br>
+                Valentina<br>
+                VVAS<br>
+                Wave and So<br>
+                Whitney K<br>
+                Yetzer Hara
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleContent(this)">@</div>
+            <div class="section-content">josh (at) studioparcmastering (dot) com</div>
+        </div>
     </div>
 
     <script>
