@@ -41,6 +41,7 @@
             margin-top: 5px;
             color: #ffffff; /* Ensure content is white */
             text-transform: none; /* Keep body text mixed case */
+            text-decoration: none; /* Force body content to not be underlined */
         }
         .section.box {
             border: 2px solid #ffffff; /* White border for design */
@@ -160,13 +161,12 @@
     <script>
         function toggleContent(section) {
             const content = section.querySelector('.section-content');
-            const header = section.firstChild; // Target only the subheader text
             if (content.style.display === "block") {
                 content.style.display = "none"; // Hide content
-                header.style.textDecoration = "none"; // Remove underline from subheader
+                section.style.textDecoration = "none"; // Remove underline from subheader
             } else {
                 content.style.display = "block"; // Show content
-                header.style.textDecoration = "underline"; // Add underline to subheader
+                section.style.textDecoration = "underline"; // Add underline to subheader
             }
         }
     </script>
