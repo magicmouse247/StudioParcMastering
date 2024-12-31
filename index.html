@@ -11,11 +11,12 @@
             background-color: #0f00e7; /* Background color matches the logo */
             color: #ffffff; /* White text for contrast */
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
+            overflow-y: auto; /* Allow scrolling for the entire page */
         }
         img {
             width: 450px;
@@ -45,6 +46,8 @@
             color: #ffffff; /* Ensure content is white */
             text-transform: none; /* Keep body text mixed case */
             text-decoration: none; /* Ensure body content is not underlined */
+            overflow-y: auto; /* Allow scrolling within content */
+            max-height: 60vh; /* Prevent content from taking the entire viewport height */
         }
         .section.box {
             border: 2px solid #ffffff; /* White border for design */
