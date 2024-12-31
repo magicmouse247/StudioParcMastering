@@ -59,9 +59,11 @@
             text-decoration: none; /* Ensure body content is not underlined */
             overflow-y: auto; /* Allow scrolling within content */
             max-height: 30vh; /* Prevent content from taking the entire viewport height */
+            scrollbar-gutter: stable; /* Ensure space for the scrollbar is always present */
         }
         .section-content::-webkit-scrollbar {
             width: 8px;
+            display: block; /* Ensure scrollbar is always visible */
         }
         .section-content::-webkit-scrollbar-thumb {
             background: #ffffff;
