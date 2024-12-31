@@ -59,7 +59,17 @@
             text-decoration: none; /* Ensure body content is not underlined */
             overflow-y: auto; /* Allow scrolling within content */
             max-height: 30vh; /* Prevent content from taking the entire viewport height */
-            scrollbar-gutter: stable; /* Ensure space for the scrollbar is always present */
+            scrollbar-gutter: stable both-edges; /* Ensure scrollbar is always visible */
+        }
+
+        .section-content::-webkit-scrollbar {
+            display: block; /* Ensure scrollbar is always displayed */
+            width: 8px; /* Set scrollbar width */
+        }
+
+        .section-content::-webkit-scrollbar-thumb {
+            background: #ffffff;
+            border-radius: 4px; /* Rounded edges for the scrollbar */
         }
         .section-content::-webkit-scrollbar {
             width: 8px;
@@ -205,3 +215,4 @@
     </script>
 </body>
 </html>
+
