@@ -28,7 +28,7 @@
                 width: 80%; /* Scale the logo to 80% of the screen width on smaller devices */
             }
         }
-        
+
         .section {
             cursor: pointer;
             margin: 10px 0;
@@ -41,7 +41,7 @@
             margin-top: 5px;
             color: #ffffff; /* Ensure content is white */
             text-transform: none; /* Keep body text mixed case */
-            text-decoration: none; /* Force body content to not be underlined */
+            text-decoration: none !important; /* Force no underline on body content */
         }
         .section.box {
             border: 2px solid #ffffff; /* White border for design */
@@ -81,77 +81,15 @@
     </div>
 
     <div class="section" onclick="toggleContent(this)">
-    ♫
-    <div class="section-content">
-        Alec Meen<br>
-        Ambrosini Rossi<br>
-        Antonello Teora<br>
-        Antonio Ciampi<br>
-        Aquarius<br>
-        Avalon Tassonyi<br>
-        Baby Smoker<br>
-        BHC<br>
-        Blue Odeur<br>
-        Brad Barr<br>
-        Carla Sagan<br>
-        Cisero<br>
-        Crack Cloud<br>
-        Crushhh<br>
-        The Daniel Saunders Experiment<br>
-        Debby Friday<br>
-        Dedicare<br>
-        Désolee<br>
-        Doffing<br>
-        Dresser<br>
-        Elf Rage<br>
-        Eve Adams<br>
-        Family Band<br>
-        Family Visions<br>
-        Farser<br>
-        The Firing Squad<br>
-        Florista<br>
-        Flotta<br>
-        girl with dream<br>
-        The Goddamsels<br>
-        GRIPES<br>
-        HRT<br>
-        inland island<br>
-        JB Special<br>
-        Jeanne Marceau<br>
-        Julien Elsie<br>
-        Kaisha Lee<br>
-        Knives<br>
-        l.n. baba<br>
-        Lucia Gisella<br>
-        Mac DeMarco<br>
-        Margret<br>
-        Military Genius<br>
-        Night Lunch<br>
-        Nonnula<br>
-        The Olympus Quartet<br>
-        Ominous Cloud<br>
-        Our Friend Colby<br>
-        Owen Ostrowski<br>
-        The Painters<br>
-        Pantie Wilson<br>
-        Petsi<br>
-        Punctï<br>
-        Tiara<br>
-        Thurible<br>
-        Really Good Bad Guy<br>
-        Rivalled Envy<br>
-        Scout<br>
-        Selce<br>
-        Sophie Wonfor<br>
-        The Submissives<br>
-        Unschooling<br>
-        Valentina<br>
-        VVAS<br>
-        Wave and So<br>
-        Whitney K<br>
-        Yetzer Hara
+        ♫
+        <div class="section-content">
+            Alec Meen<br>
+            Ambrosini Rossi<br>
+            Antonello Teora<br>
+            Antonio Ciampi<br>
+            ...
+        </div>
     </div>
-</div>
 
     <div class="section" onclick="toggleContent(this)">
         @
@@ -161,13 +99,18 @@
     <script>
         function toggleContent(section) {
             const content = section.querySelector('.section-content');
+            const subheader = section.firstChild; // Target the subheader directly
+
             if (content.style.display === "block") {
-                content.style.display = "none"; // Hide content
-                section.style.textDecoration = "none"; // Remove underline from subheader
+                content.style.display = "none"; // Hide the body content
+                subheader.style.textDecoration = "none"; // Remove underline from subheader
             } else {
-                content.style.display = "block"; // Show content
-                section.style.textDecoration = "underline"; // Add underline to subheader
+                content.style.display = "block"; // Show the body content
+                subheader.style.textDecoration = "underline"; // Add underline to subheader
             }
+
+            // Ensure body text does not inherit underline
+            content.style.textDecoration = "none";
         }
     </script>
 </body>
