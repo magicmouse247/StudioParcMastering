@@ -41,7 +41,7 @@
             margin-top: 5px;
             color: #ffffff; /* Ensure content is white */
             text-transform: none; /* Keep body text mixed case */
-            text-decoration: none !important; /* Force no underline on body content */
+            text-decoration: none !important; /* Force body content to not be underlined */
         }
         .section.box {
             border: 2px solid #ffffff; /* White border for design */
@@ -57,7 +57,10 @@
     <!-- Sections -->
     <div class="section" style="border: 2px solid #ffffff; padding: 10px; display: inline-block;" onclick="toggleContent(this)">
         submit your music for mastering
-        <div class="section-content"><p>Send unmastered .wav files // project info to<br><em>josh (at) studioparcmastering (dot) com</em><br></p><p>I will respond within 24hrs with a quote.</p></div>
+        <div class="section-content">
+            <p>Send unmastered .wav files // project info to<br><em>josh (at) studioparcmastering (dot) com</em><br></p>
+            <p>I will respond within 24hrs with a quote.</p>
+        </div>
     </div>
 
     <div class="section" onclick="toggleContent(this)">
@@ -65,19 +68,21 @@
         <div class="section-content">
             <p>Professional, affordable audio mastering.<br>
                 Crafted to achieve the aesthetic and technical goals of your project.</p>
-        <p><strong>:: SERVICES ::</strong></p>
-        <p><em>Music for DSPs<br>
-        Vinyl Masters<br>
-        Podcast editing and mastering<br>
-        CD Masters / DDP Delivery<br>
-        etc...</p></em>
+            <p><strong>:: SERVICES ::</strong></p>
+            <p><em>Music for DSPs<br>
+                Vinyl Masters<br>
+                Podcast editing and mastering<br>
+                CD Masters / DDP Delivery<br>
+                etc...</p></em>
             <p>Studio Parc is operated by Josh Boguski</p>
         </div>
     </div>
 
     <div class="section" onclick="toggleContent(this)">
         $
-        <div class="section-content">Rates vary from project to project. Average cost per album: $500. per single: $100.</div>
+        <div class="section-content">
+            Rates vary from project to project. Average cost per album: $500. per single: $100.
+        </div>
     </div>
 
     <div class="section" onclick="toggleContent(this)">
@@ -99,17 +104,18 @@
     <script>
         function toggleContent(section) {
             const content = section.querySelector('.section-content');
-            const subheader = section.firstChild; // Target the subheader directly
+            const subheader = section.firstChild; // Target the subheader directly (first text node)
 
+            // Toggle visibility of content
             if (content.style.display === "block") {
-                content.style.display = "none"; // Hide the body content
-                subheader.style.textDecoration = "none"; // Remove underline from subheader
+                content.style.display = "none"; // Hide body content
+                section.style.textDecoration = "none"; // Remove underline from subheader
             } else {
-                content.style.display = "block"; // Show the body content
-                subheader.style.textDecoration = "underline"; // Add underline to subheader
+                content.style.display = "block"; // Show body content
+                section.style.textDecoration = "underline"; // Add underline to subheader
             }
 
-            // Ensure body text does not inherit underline
+            // Ensure body content is not underlined
             content.style.textDecoration = "none";
         }
     </script>
