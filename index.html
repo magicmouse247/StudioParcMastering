@@ -160,12 +160,13 @@
     <script>
         function toggleContent(section) {
             const content = section.querySelector('.section-content');
+            const header = section.firstChild; // Target only the subheader text
             if (content.style.display === "block") {
                 content.style.display = "none"; // Hide content
-                section.style.textDecoration = "none"; // Remove underline from subheader
+                header.style.textDecoration = "none"; // Remove underline from subheader
             } else {
                 content.style.display = "block"; // Show content
-                section.style.textDecoration = "underline"; // Add underline to subheader
+                header.style.textDecoration = "underline"; // Add underline to subheader
             }
         }
     </script>
