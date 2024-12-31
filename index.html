@@ -159,16 +159,15 @@
 
     <script>
         function toggleContent(section) {
-    const content = section.querySelector('.section-content');
-    if (content.style.display === "block") {
-        content.style.display = "none"; // Hide the body content
-        section.style.textDecoration = "none"; // Remove underline from subheader
-    } else {
-        content.style.display = "block"; // Show the body content
-        section.style.textDecoration = "underline"; // Add underline to subheader
-    }
-}
-
+            const content = section.querySelector('.section-content');
+            if (content.style.display === "block") {
+                content.style.display = "none"; // Hide content
+                section.style.textDecoration = "none"; // Remove underline from subheader
+            } else {
+                content.style.display = "block"; // Show content
+                section.style.textDecoration = "underline"; // Add underline to subheader
+            }
+        }
     </script>
 </body>
 </html>
