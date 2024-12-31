@@ -54,12 +54,17 @@
             display: none; /* Start hidden */
             font-size: 1rem;
             margin-top: 5px;
-            color: #ffffff; /* Ensure content is white */
-            text-transform: none; /* Keep body text mixed case */
-            text-decoration: none; /* Ensure body content is not underlined */
-            overflow-y: auto; /* Allow scrolling within content */
-            max-height: 30vh; /* Prevent content from taking the entire viewport height */
-            scrollbar-gutter: stable both-edges; /* Ensure scrollbar is always visible */
+            color: #ffffff;
+            text-transform: none;
+            text-decoration: none;
+            overflow-y: auto; /* Allow scrolling for sections that need it */
+            max-height: 30vh;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        .section-content.no-scroll {
+            overflow-y: visible; /* Allow the content to expand fully */
+            max-height: none; /* No height restriction */
         }
 
         .section-content::-webkit-scrollbar {
@@ -101,8 +106,8 @@
 
         <div class="section">
             <div class="section-header" onclick="toggleContent(this)">?</div>
-            <div class="section-content">
-                <p>Professional, affordable audio masters -- crafted to achieve the aesthetic and technical goals of your project.</p>
+            <div class="section-content no-scroll">
+        <p>Professional, affordable audio masters -- crafted to achieve the aesthetic and technical goals of your project.</p>
                 <p><strong>:: SERVICES ::</strong></p>
                 <p><em>Mastering for DSPs<br>
                     Vinyl<br>
